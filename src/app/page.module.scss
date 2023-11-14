@@ -31,6 +31,10 @@ button.connectWallet {
     margin: 0 auto;
     padding: 0.5rem 1rem;
   }
+
+  &:disabled{
+    opacity: 0.5;
+  }
 }
 
 .Container {

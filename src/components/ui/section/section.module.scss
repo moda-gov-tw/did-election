@@ -1,0 +1,37 @@
+
+.Section {
+    width: calc(var(--max-width) - 2 * var(--page-padding-x));
+    margin-bottom: 2rem;
+    letter-spacing: 0.2em;
+    line-height: 2em;
+    font-weight: bold;
+  
+    >h2 {
+      letter-spacing: 1em;
+      font-size: 1.5rem;
+      color: var(--secondary-color);
+      font-weight: bold;
+      text-align: center;
+      margin-top: 5rem;
+      margin-bottom: 4rem;
+      text-shadow: 0 4px 0 var(--secondary-background-color);
+
+      @media screen and (max-width: 768px) {
+        letter-spacing: 0.25em;
+        
+      }
+    }
+  
+  
+    p {
+      margin-bottom: 2rem;
+    }
+  
+    li {
+      margin-left: 2rem;
+      letter-spacing: 0.2em;
+      line-height: 2em;
+      font-weight: bold;
+    }
+  }
+  

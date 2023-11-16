@@ -32,7 +32,7 @@ button.connectWallet {
     padding: 0.5rem 1rem;
   }
 
-  &:disabled{
+  &:disabled {
     opacity: 0.5;
   }
 }
@@ -74,7 +74,9 @@ button.connectWallet {
   overflow: hidden;
   height: auto;
   position: relative;
+  --pagination-padding: 40px;
   --sidebar-width: 40px;
+  --collapse-height: 500px;
 
   @media screen and (max-width: 768px) {
     --sidebar-width: 60px;
@@ -90,12 +92,12 @@ button.connectWallet {
 
 
 .politicsCollapsed {
-  height: 400px;
+  height: var(--collapse-height);
 
   .politicsCollapsedOverlaySidebar {
     position: absolute;
     left: 0;
-    top: 300px;
+    top: 400px;
     height: 100px;
     text-align: center;
     padding-top: 3rem;
@@ -129,6 +131,7 @@ button.connectWallet {
   display: block;
   left: 0;
   transform: translateX(-100%);
+  padding-top: var(--pagination-padding);
 
   img {
     height: 100%;
@@ -139,7 +142,17 @@ button.connectWallet {
 .swiper {
   width: 100%;
   height: 100%;
+  --swiper-pagination-top: 0;
+  --swiper-pagination-bottom: auto;
+  --swiper-pagination-color: var(--prim-color);
+  --swiper-pagination-bullet-inactive-color: var(--text-color);
+  --swiper-pagination-bullet-inactive-opacity: 0.5;
 
+  padding-top: var(--pagination-padding);
+
+  :global(.swiper-pagination) {
+    padding-right: var(--sidebar-width);
+  }
 }
 
 .politicTable {
@@ -218,7 +231,7 @@ button.connectWallet {
 
   }
 
-  small{
+  small {
     color: var(--prim-color);
   }
 }

@@ -7,6 +7,8 @@ import { Header } from '@/components/layout/header';
 import { Section, useSection } from '@/components/ui/section';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
+import 'swiper/css/pagination';
+import { Pagination } from 'swiper/modules';
 
 
 const Card = ({ children }: { children: any }) => (
@@ -107,11 +109,13 @@ export default function Home() {
                 {politicsCollapsed && <div className={styles.politicsCollapsedOverlaySidebar} onClick={() => setpoliticsCollapsed(false)} />}
               </div>
               <Swiper
+                pagination={true}
+                modules={[Pagination]}
                 breakpoints={{
                   480: {
                     slidesPerView: 1
                   },
-                  768: {
+                  769: {
                     slidesPerView: 4
                   },
                   1024: {

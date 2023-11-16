@@ -2,12 +2,10 @@ import { ReactNode } from 'react';
 import styles from './button.module.scss';
 
 export interface buttonProps {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   onClick: any;
   icon?: () => ReactNode;
   disabled?: boolean;
   text?: string;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   props?: any;
   variant?: 'danger' | 'primary' | 'secondary' | 'link';
 }

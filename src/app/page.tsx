@@ -46,10 +46,10 @@ const candidates: Candidate[] = [{
   name: 'RICE',
   birthday: '時候未DAO',
   gender: '聞聞味DAO才知DAO',
-  dao: '胡說八道DAO'
+  dao: '不知DAO'
 }]
 
-export const CandidateCard = ({ candidate, index }: { candidate: Candidate, index: number }) =>
+const CandidateCard = ({ candidate, index }: { candidate: Candidate, index: number }) =>
   <Card>
     <div className={styles.CandidateCard}>
       <Button onClick={console.log('ok')} text='投票給我' variant="primary" disabled={true} />
@@ -145,14 +145,14 @@ export default function Home() {
             <div className={styles.rule}>
               <p>候選人資格</p>
               <ul>
-                <li>必須申請dPassport（數位自然人憑證）</li>
+                <li>必須申請Taiwan DID</li>
                 <li>政見需與web3社會基礎建設發展相關。</li>
               </ul>
             </div>
             <div className={styles.rule}>
               <p>投票人資格</p>
               <ul>
-                <li>需申請dPassport(數位自然人憑證DID)者,方有投票權和資格。</li>
+                <li>已申請Taiwan DID者,方有投票權和資格。</li>
               </ul>
             </div>
           </div>
@@ -176,14 +176,14 @@ export default function Home() {
             <div className={styles.step}>
               <img className={styles.stepImage} src='/images/steps/3.png' alt='step1' />
               <p className={styles.date}>2023/12/01~17</p>
-              <p>認證DiD並進行投票</p>
+              <p>認證DID並進行投票</p>
               <small>網站和現場皆可投票</small>
             </div>
             <img className={styles.arrow} src='/images/steps/arrow.png' alt='>' />
             <div className={styles.step}>
               <img className={styles.stepImage} src='/images/steps/4.png' alt='step1' />
-              <p className={styles.date}>2023/12/18</p>
-              <p>公佈選舉規範</p>
+              <p className={styles.date}>2023/12/17</p>
+              <p>DAO Taipei開票</p>
             </div>
           </div>
         </Section>

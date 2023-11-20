@@ -82,6 +82,10 @@ button.connectWallet {
     --sidebar-width: 60px;
   }
 
+  @media screen and (max-width: 480px) {
+    --sidebar-width: 40px;
+  }
+
 }
 
 .politicsTable {
@@ -104,7 +108,7 @@ button.connectWallet {
     font-size: 1.5rem;
     width: 100%;
     z-index: 1;
-    background: linear-gradient(0deg, rgba(124, 155, 179, 0.80) 27.37%, rgba(217, 217, 217, 0.00) 100%);
+    background: linear-gradient(0deg, rgba(255, 229, 106, 0.80) 27.37%, rgba(217, 217, 217, 0.00) 100%);
   }
 
   .politicsCollapsedOverlay {
@@ -119,7 +123,7 @@ button.connectWallet {
     font-size: 1.5rem;
     right: 0;
     z-index: 1;
-    background: linear-gradient(0deg, rgba(124, 155, 179, 0.80) 27.37%, rgba(217, 217, 217, 0.00) 100%);
+    background: linear-gradient(0deg, rgba(255, 229, 106, 0.80) 27.37%, rgba(217, 217, 217, 0.00) 100%);
   }
 }
 
@@ -177,6 +181,8 @@ button.connectWallet {
   p {
     margin: 0;
     background-color: var(--prim-color);
+    color: var(--background-color);
+    font-weight: bold;
     width: 2.5rem;
     padding: 0.75rem;
     line-height: 1.5rem;

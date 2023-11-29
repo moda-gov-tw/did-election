@@ -1,0 +1,124 @@
+diff --git a/node_modules/@semaphore-protocol/proof/dist/index.node.mjs b/node_modules/@semaphore-protocol/proof/dist/index.node.mjs
+index 00bbdbe..f84b848 100644
+--- a/node_modules/@semaphore-protocol/proof/dist/index.node.mjs
++++ b/node_modules/@semaphore-protocol/proof/dist/index.node.mjs
+@@ -519,101 +519,101 @@ function poseidon16(inputs) {
+   return (0, _poseidon.default)(inputs, c);
+ }
+ 
+-(function (exports) {
+-	Object.defineProperty(exports, "__esModule", {
++(function (poseidon) {
++	Object.defineProperty(poseidon, "__esModule", {
+ 	  value: true
+ 	});
+-	Object.defineProperty(exports, "poseidon1", {
++	Object.defineProperty(poseidon, "poseidon1", {
+ 	  enumerable: true,
+ 	  get: function () {
+ 	    return _poseidon.poseidon1;
+ 	  }
+ 	});
+-	Object.defineProperty(exports, "poseidon10", {
++	Object.defineProperty(poseidon, "poseidon10", {
+ 	  enumerable: true,
+ 	  get: function () {
+ 	    return _poseidon10.poseidon10;
+ 	  }
+ 	});
+-	Object.defineProperty(exports, "poseidon11", {
++	Object.defineProperty(poseidon, "poseidon11", {
+ 	  enumerable: true,
+ 	  get: function () {
+ 	    return _poseidon11.poseidon11;
+ 	  }
+ 	});
+-	Object.defineProperty(exports, "poseidon12", {
++	Object.defineProperty(poseidon, "poseidon12", {
+ 	  enumerable: true,
+ 	  get: function () {
+ 	    return _poseidon12.poseidon12;
+ 	  }
+ 	});
+-	Object.defineProperty(exports, "poseidon13", {
++	Object.defineProperty(poseidon, "poseidon13", {
+ 	  enumerable: true,
+ 	  get: function () {
+ 	    return _poseidon13.poseidon13;
+ 	  }
+ 	});
+-	Object.defineProperty(exports, "poseidon14", {
++	Object.defineProperty(poseidon, "poseidon14", {
+ 	  enumerable: true,
+ 	  get: function () {
+ 	    return _poseidon14.poseidon14;
+ 	  }
+ 	});
+-	Object.defineProperty(exports, "poseidon15", {
++	Object.defineProperty(poseidon, "poseidon15", {
+ 	  enumerable: true,
+ 	  get: function () {
+ 	    return _poseidon15.poseidon15;
+ 	  }
+ 	});
+-	Object.defineProperty(exports, "poseidon16", {
++	Object.defineProperty(poseidon, "poseidon16", {
+ 	  enumerable: true,
+ 	  get: function () {
+ 	    return _poseidon16.poseidon16;
+ 	  }
+ 	});
+-	Object.defineProperty(exports, "poseidon2", {
++	Object.defineProperty(poseidon, "poseidon2", {
+ 	  enumerable: true,
+ 	  get: function () {
+ 	    return _poseidon2.poseidon2;
+ 	  }
+ 	});
+-	Object.defineProperty(exports, "poseidon3", {
++	Object.defineProperty(poseidon, "poseidon3", {
+ 	  enumerable: true,
+ 	  get: function () {
+ 	    return _poseidon3.poseidon3;
+ 	  }
+ 	});
+-	Object.defineProperty(exports, "poseidon4", {
++	Object.defineProperty(poseidon, "poseidon4", {
+ 	  enumerable: true,
+ 	  get: function () {
+ 	    return _poseidon4.poseidon4;
+ 	  }
+ 	});
+-	Object.defineProperty(exports, "poseidon5", {
++	Object.defineProperty(poseidon, "poseidon5", {
+ 	  enumerable: true,
+ 	  get: function () {
+ 	    return _poseidon5.poseidon5;
+ 	  }
+ 	});
+-	Object.defineProperty(exports, "poseidon6", {
++	Object.defineProperty(poseidon, "poseidon6", {
+ 	  enumerable: true,
+ 	  get: function () {
+ 	    return _poseidon6.poseidon6;
+ 	  }
+ 	});
+-	Object.defineProperty(exports, "poseidon7", {
++	Object.defineProperty(poseidon, "poseidon7", {
+ 	  enumerable: true,
+ 	  get: function () {
+ 	    return _poseidon7.poseidon7;
+ 	  }
+ 	});
+-	Object.defineProperty(exports, "poseidon8", {
++	Object.defineProperty(poseidon, "poseidon8", {
+ 	  enumerable: true,
+ 	  get: function () {
+ 	    return _poseidon8.poseidon8;
+ 	  }
+ 	});
+-	Object.defineProperty(exports, "poseidon9", {
++	Object.defineProperty(poseidon, "poseidon9", {
+ 	  enumerable: true,
+ 	  get: function () {
+ 	    return _poseidon9.poseidon9;

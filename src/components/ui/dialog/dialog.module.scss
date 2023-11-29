@@ -14,8 +14,9 @@
 }
 
 .Dialog {
-    background-color: var(--bg-color);
+    background-color: var(--background-color);
     border-radius: var(--border-radius);
+    border: var(--dialog-border);
     padding: 1rem;
     width: 100%;
     max-width: 400px;

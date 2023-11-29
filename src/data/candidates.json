@@ -1,0 +1,30 @@
+[
+    {
+        "index": 0,
+        "potrait": "/images/candidates/1.png",
+        "name": "笑鼠",
+        "gender": "未知",
+        "dao": "FAB DAO"
+    },
+    {
+        "index": 1,
+        "name": "DAO疤貓",
+        "potrait": "/images/candidates/2.png",
+        "gender": "流動性別",
+        "dao": "da0 零時道"
+    },
+    {
+        "index": 2,
+        "potrait": "/images/candidates/3.png",
+        "name": "章笑顏",
+        "gender": "不跟你說",
+        "dao": "Volume DAO\n眾聲道"
+    },
+    {
+        "index": 3,
+        "potrait": "/images/candidates/4.png",
+        "name": "RICE",
+        "gender": "聞聞味DAO才知DAO",
+        "dao": "不知DAO"
+    }
+]

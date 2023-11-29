@@ -3,18 +3,28 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3003",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postinstall": "patch-package"
   },
   "dependencies": {
+    "@semaphore-protocol/group": "^3.15.1",
+    "@semaphore-protocol/identity": "^3.15.1",
+    "@semaphore-protocol/proof": "^3.15.1",
+    "@tw-did/core": "^0.0.1",
+    "@veramo/core": "^5.5.3",
+    "@veramo/key-manager": "^5.5.3",
     "csv-parse": "^5.5.2",
+    "mongodb": "^6.3.0",
     "next": "13.5.6",
+    "patch-package": "^8.0.0",
     "react": "^18",
     "react-dom": "^18",
     "sass": "^1.69.4",
-    "swiper": "^11.0.3"
+    "swiper": "^11.0.3",
+    "wagmi": "^1.4.7"
   },
   "devDependencies": {
     "@types/node": "^20",

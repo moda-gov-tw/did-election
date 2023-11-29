@@ -4,8 +4,8 @@ import { Button, buttonProps } from '../button';
 
 export interface DialogProps {
   className?: string;
-  children: ReactNode;
-  title: string;
+  children?: ReactNode;
+  title?: string;
   actions?: buttonProps[];
 }
 
@@ -27,9 +27,9 @@ export const useDialog = () => {
   return dialogController;
 };
 
-export const Dialog = ({ children, title, actions }: DialogProps) => {
+export const Dialog = ({ children, title, actions, className }: DialogProps) => {
   return (
-    <div className={styles.DialogOverlay}>
+    <div className={styles.DialogOverlay + ' ' + (className ? className : '')}>
       <div className={styles.Dialog}>
         <div className={styles.DialogHeader}>{title}</div>
         <div className={styles.DialogBody}>{children}</div>

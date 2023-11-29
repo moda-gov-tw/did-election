@@ -1,14 +1,14 @@
 import { MongoClient } from 'mongodb'
 
-if (!process.env.MONGO_URI || !process.env.MONGO_INITDB_ROOT_USERNAME || !process.env.MONGO_INITDB_ROOT_PASSWORD || !process.env.MONGO_DATABASE) {
+if (!process.env.MONGO_URI || !process.env.MONGO_DATABASE_USERNAME || !process.env.MONGO_DATABASE_PASSWORD || !process.env.MONGO_DATABASE) {
   throw new Error('Invalid/Missing environment variable: "MONGO_URI"')
 }
 
 const uri = process.env.MONGO_URI
 const options = {
   auth: {
-    username: process.env.MONGO_INITDB_ROOT_USERNAME,
-    password: process.env.MONGO_INITDB_ROOT_PASSWORD
+    username: process.env.MONGO_DATABASE_USERNAME,
+    password: process.env.MONGO_DATABASE_PASSWORD
   }
 }
 

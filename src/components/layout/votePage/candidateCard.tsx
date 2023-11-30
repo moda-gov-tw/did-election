@@ -102,7 +102,7 @@ export const CandidateCard = ({ useDiD, candidate }: { useDiD: boolean, candidat
         {voteDialog.props && <Dialog {...voteDialog.props} className={styles.voteDialog} />}
         <Card>
             {/* {wallet && <div className={styles.wallet}>{wallet?.address}</div>} */}
-            <div className={styles.CandidateCard}>
+            <div className={styles.CandidateCard + ' ' + (useDiD ? styles.useDiD : '')}>
                 {elected && <div className={styles.elected}><img src={electedImage.src} alt='elected' /></div>}
                 {
                     vote ? <Button onClick={() => voteDialog.open(confirmDialog)} text='投票給我' variant="primary" />

@@ -312,18 +312,24 @@ button.connectWallet {
         .vote {
             text-align: center;
             border-radius: 0.25rem;
-            border: 2px solid var(--yellow-color);
+            border: 2px solid var(--prim-color);
             padding: 0 1rem;
-            color: var(--yellow-color);
+            color: var(--prim-color);
+        }
+
+        &.useDiD button {
+            --prim-color: var(--pink-color);
         }
 
         button {
-            --prim-color: var(--pink-color);
+            --prim-color: var(--yellow-color);
             width: 3rem;
             border-radius: 0.25rem;
             font-weight: bold;
             padding: 0.25rem;
             transition-duration: var(--animation-duration);
+
+
 
             &:hover {
                 color: var(--secondary-color);
@@ -336,13 +342,14 @@ button.connectWallet {
         }
     }
 
-    .elected{
+    .elected {
         transform: translate(-1.5rem, -2.5rem);
         z-index: 1;
         position: absolute;
         top: 0;
         left: 0;
-        img{
+
+        img {
             width: 150px;
 
         }
@@ -356,7 +363,7 @@ button.connectWallet {
     button {
         text-align: center;
         border-radius: 0.25rem;
-        // border: 2px solid var(--yellow-color);
+        // border: 2px solid var(--prim-color);
         padding: 0.5rem 1rem;
         color: var(--prim-color);
 

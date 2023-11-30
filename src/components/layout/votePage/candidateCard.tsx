@@ -73,7 +73,10 @@ export const CandidateCard = ({ useDiD, candidate }: { useDiD: boolean, candidat
         if (e.message.startsWith('The identity is not part of the group') || e.message.startsWith('not in group'))
             return voteDialog.open({
                 ...errorDialog,
-                children: '請先綁定您的錢包和TW-Fido'
+                children: <>
+                    請先使用你的錢包申請台灣DiD<br />
+                    <a target="_blank" href={process.env.NEXT_PUBLIC_TW_DID_API}>申請台灣DiD</a>
+                </>
             })
 
         return voteDialog.open(errorDialog)
@@ -81,7 +84,10 @@ export const CandidateCard = ({ useDiD, candidate }: { useDiD: boolean, candidat
 
     const successDialog = {
         title: '投票成功',
-        children: '謝謝您投出寶貴的一票。',
+        children: <>
+            謝謝您投出寶貴的一票。<br />
+            {useDiD && <a target="_blank" href={process.env.NEXT_PUBLIC_TW_DID_API}>申請台灣DiD</a>}
+        </>,
         actions: [{
             text: '確定',
             onClick: () => voteDialog.close()

@@ -372,4 +372,13 @@ button.connectWallet {
             background-color: var(--secondary-background-color);
         }
     }
+
+    a{
+        color: var(--prim-color);
+        padding-bottom: 0.2em;
+        border-bottom: 1px solid var(--prim-color);
+        &:hover{
+            opacity: 0.5;
+        }
+    }
 }

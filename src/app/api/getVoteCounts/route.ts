@@ -20,7 +20,7 @@ export async function GET(request: Request) {
   }
 }
 
-export async function getVoteCountArr() {
+async function getVoteCountArr() {
 
   const candidatesModel = await getCandidatesModel();
   const voteRecords = await candidatesModel.query();

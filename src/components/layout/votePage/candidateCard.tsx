@@ -51,7 +51,6 @@ export const CandidateCard = ({ useDiD, candidate }: { useDiD: boolean, candidat
 
         await disconnect()
 
-        console.log(e)
 
         if (e.message.startsWith('Connector not found'))
             return voteDialog.open({

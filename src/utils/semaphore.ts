@@ -17,7 +17,6 @@ export default async function generateSemaphoreProof(candidateId: number) {
 
     const commitments: CommitmentsDto = await fetchCommitments();
 
-    console.log(commitments.activated.filter(c => c !== null))
     const group = new Group(
         SEMAPHORE_GROUP_ID,
         SEMAPHORE_GROUP_DEPTH,
@@ -35,7 +34,6 @@ export default async function generateSemaphoreProof(candidateId: number) {
 
     // send full proof to server and server can verify and then record in database
     const isValid = await verifyProof(fullProof, SEMAPHORE_GROUP_DEPTH);
-    console.log(fullProof, isValid)
     return { fullProof, isValid };
 }
 
@@ -72,7 +70,6 @@ async function generateSemaphoreIdentity() {
 };
 
 async function fetchCommitments() {
-    console.log(`${process.env.NEXT_PUBLIC_TW_DID_API}/api/users/commitments`)
     const commitments: CommitmentsDto = await fetch(
         `${process.env.NEXT_PUBLIC_TW_DID_API}/api/users/commitments`
     ).then((res) => res.json());
@@ -82,23 +79,4 @@ async function fetchCommitments() {
 export async function verifySemaphoreProof(proof: any) {
     const isValid = await verifyProof(proof, SEMAPHORE_GROUP_DEPTH);
     return isValid;
-}
-
-function isConnected() {
-    const { isConnected } = useAccount();
-    return isConnected;
-}
-
-
-function connectWallet() {
-    const { connectors } = useConfig();
-    const { connect } = useConnect({
-        connector: connectors[0],
-    });
-    connect();
-}
-
-function disconnectWallet() {
-    const { disconnect } = useDisconnect();
-    disconnect();
 }

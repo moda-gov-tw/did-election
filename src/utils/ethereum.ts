@@ -25,20 +25,6 @@ class UnsupportChainError extends Error {
   }
 }
 
-export function getWalletClient(): WalletClient {
-  const chain = getChain();
-
-  const ethereum = window.ethereum;
-  if (!ethereum) {
-    throw new EthereumProviderNotExistError();
-  }
-
-  return createWalletClient({
-    chain,
-    transport: custom(ethereum),
-  });
-}
-
 export function getNetworkName(chain: Chain) {
   if (chain.id === mainnet.id) {
     return 'mainnet';

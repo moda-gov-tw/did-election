@@ -6,7 +6,7 @@ export function middleware(request: NextRequest) {
   const unsafeEval = process.env.NODE_ENV === "production" ? "" : `'unsafe-eval'`
   const cspHeader = `
     default-src 'self';
-    script-src 'self' 'nonce-${nonce}' 'strict-dynamic' ${unsafeEval};
+    script-src 'self' 'nonce-${nonce}' 'strict-dynamic' ${unsafeEval} 'wasm-unsafe-eval';
     connect-src
       'self'
       data:

@@ -86,7 +86,7 @@ export const CandidateCard = ({ useDiD, candidate }: { useDiD: boolean, candidat
         title: '投票成功',
         children: <>
             謝謝您投出寶貴的一票。<br />
-            {useDiD && <a target="_blank" href={process.env.NEXT_PUBLIC_TW_DID_API}>申請台灣DiD</a>}
+            {!useDiD && <a target="_blank" href={process.env.NEXT_PUBLIC_TW_DID_API}>申請台灣DiD</a>}
         </>,
         actions: [{
             text: '確定',

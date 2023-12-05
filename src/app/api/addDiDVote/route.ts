@@ -22,9 +22,9 @@ export async function POST(request: Request) {
       return Response.json({ message: 'invalid candidateId' }, { status: 403 })
 
     // TODO: verify in server
-    // const proofValid = await verifyProof(fullProof, SEMAPHORE_GROUP_DEPTH)
-    // if (!proofValid)
-    //   return Response.json({ message: 'The identity is not part of the group' }, { status: 403 })
+    const proofValid = await verifyProof(fullProof, SEMAPHORE_GROUP_DEPTH)
+    if (!proofValid)
+      return Response.json({ message: 'The identity is not part of the group' }, { status: 403 })
 
     const nullifierHashcheck = await addNullifier(fullProof.nullifierHash);
     if (!nullifierHashcheck) return Response.json({ message: 'already voted' }, { status: 403 })

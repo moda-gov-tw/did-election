@@ -86,7 +86,7 @@ export const CandidateCard = ({ useDiD, candidate }: { useDiD: boolean; candidat
           <>
             請先使用你的錢包申請台灣DiD
             <br />
-            <a target="_blank" href={process.env.NEXT_PUBLIC_TW_DID_API}>
+            <a target="_blank" href={process.env.NEXT_PUBLIC_TW_DID_API} rel="noopener noreferrer">
               申請台灣DiD
             </a>
           </>
@@ -103,7 +103,7 @@ export const CandidateCard = ({ useDiD, candidate }: { useDiD: boolean; candidat
         謝謝您投出寶貴的一票。
         <br />
         {!useDiD && (
-          <a target="_blank" href={process.env.NEXT_PUBLIC_TW_DID_API}>
+          <a target="_blank" href={process.env.NEXT_PUBLIC_TW_DID_API} rel="noopener noreferrer">
             申請台灣DiD
           </a>
         )}

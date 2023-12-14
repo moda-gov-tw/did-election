@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     reactStrictMode: true,
-    output: "standalone", async headers() {
+    output: "standalone",
+    async headers() {
         return [
             {
                 source: "/(.*)",
@@ -13,10 +14,6 @@ const nextConfig = {
                     {
                         key: "X-Content-Type-Options",
                         value: "nosniff"
-                    },
-                    {
-                        key: "Referrer-Policy",
-                        value: "origin-when-cross-origin"
                     }
                 ]
             }

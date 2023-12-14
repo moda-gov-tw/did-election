@@ -1,7 +1,7 @@
-'use client'
-import VotePage from '@/components/layout/votePage';
-import { WagmiConfig } from 'wagmi';
-import { getConfig } from '@/utils/ethereum';
+"use client"
+import VotePage from "@/components/layout/votePage"
+import { WagmiConfig } from "wagmi"
+import { getConfig } from "@/utils/ethereum"
 const wagmiConfig = getConfig()
 
 export default function Home() {

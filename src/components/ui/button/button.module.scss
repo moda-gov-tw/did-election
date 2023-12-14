@@ -1,49 +1,49 @@
 .Button {
+  --button-color: var(--bg-color2);
+  --button-width: var(--button-width);
+  --button-text-color: var(--text-color2);
+  font-size: 1rem;
+  color: var(--button-text-color);
+  background-color: var(--button-color);
+  border: 2px solid var(--button-color);
+  padding: 0.75rem 2rem;
+  border-radius: var(--button-radius);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  position: relative;
+  cursor: pointer;
+
+  svg {
+    position: absolute;
+    right: 1rem;
+  }
+
+  &.danger {
+    --button-color: var(--error-color);
+    --button-text-color: var(--bg-color);
+  }
+
+  &.primary {
+    --button-color: var(--prim-color);
+    --button-text-color: var(--bg-color);
+  }
+
+  &.secondary {
     --button-color: var(--bg-color2);
-    --button-width: var(--button-width);
     --button-text-color: var(--text-color2);
-    font-size: 1rem;
-    color: var(--button-text-color);
-    background-color: var(--button-color);
-    border: 2px solid var(--button-color);
-    padding: 0.75rem 2rem;
-    border-radius: var(--button-radius);
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    position: relative;
-    cursor: pointer;
+  }
 
-    svg {
-        position: absolute;
-        right: 1rem;
-    }
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
 
-    &.danger {
-        --button-color: var(--error-color);
-        --button-text-color: var(--bg-color);
-    }
-
-    &.primary {
-        --button-color: var(--prim-color);
-        --button-text-color: var(--bg-color);
-    }
-
-    &.secondary {
-        --button-color: var(--bg-color2);
-        --button-text-color: var(--text-color2);
-    }
-
-    &:disabled {
-        opacity: 0.5;
-        cursor: not-allowed;
-    }
-    
-    &.link{
-        background-color: transparent;
-        padding: 0 0 0 0;
-        border: none;
-        border-radius: 0;
-        letter-spacing: 0;
-        border-bottom: 1px solid var(--text-color2);
-    }
+  &.link {
+    background-color: transparent;
+    padding: 0 0 0 0;
+    border: none;
+    border-radius: 0;
+    letter-spacing: 0;
+    border-bottom: 1px solid var(--text-color2);
+  }
 }

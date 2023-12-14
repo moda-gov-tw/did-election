@@ -1,6 +1,11 @@
-import { MongoClient } from 'mongodb'
+import { MongoClient } from "mongodb"
 
-if (!process.env.MONGO_URI || !process.env.MONGO_DATABASE_USERNAME || !process.env.MONGO_DATABASE_PASSWORD || !process.env.MONGO_DATABASE) {
+if (
+  !process.env.MONGO_URI ||
+  !process.env.MONGO_DATABASE_USERNAME ||
+  !process.env.MONGO_DATABASE_PASSWORD ||
+  !process.env.MONGO_DATABASE
+) {
   throw new Error('Invalid/Missing environment variable: "MONGO_URI"')
 }
 
@@ -15,7 +20,7 @@ const options = {
 let client
 let clientPromise: Promise<MongoClient>
 
-if (process.env.NODE_ENV === 'development') {
+if (process.env.NODE_ENV === "development") {
   // In development mode, use a global variable so that the value
   // is preserved across module reloads caused by HMR (Hot Module Replacement).
   let globalWithMongo = global as typeof globalThis & {

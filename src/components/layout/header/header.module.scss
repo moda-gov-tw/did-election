@@ -9,8 +9,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
-
 }
 
 .nav {
@@ -45,7 +43,6 @@
 
   transition: 300ms ease-in-out;
 
-
   @media screen and (max-width: 768px) {
     padding: 1.5rem;
     position: fixed;
@@ -62,18 +59,15 @@
 
     &.show {
       transform: scaleY(1);
-
     }
 
     button {
-
       &:hover,
       &:active,
       &.active {
         border-bottom: 0px;
       }
     }
-
   }
 }
 

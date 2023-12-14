@@ -1,44 +1,39 @@
-import { ReactNode, useCallback, useMemo, useState } from 'react';
-import styles from './dialog.module.scss';
-import { Button, buttonProps } from '../button';
+import { ReactNode, useCallback, useMemo, useState } from "react"
+import styles from "./dialog.module.scss"
+import { Button, buttonProps } from "../button"
 
 export interface DialogProps {
-  className?: string;
-  children?: ReactNode;
-  title?: string;
-  actions?: buttonProps[];
+  className?: string
+  children?: ReactNode
+  title?: string
+  actions?: buttonProps[]
 }
 
 export const useDialog = () => {
-  const [props, setProps] = useState<DialogProps | undefined>();
+  const [props, setProps] = useState<DialogProps | undefined>()
   const open = useCallback(
     (openProps: DialogProps) => {
-      openProps && setProps(openProps);
+      openProps && setProps(openProps)
     },
     [setProps]
-  );
-  const close = useCallback(() => setProps(undefined), [setProps]);
+  )
+  const close = useCallback(() => setProps(undefined), [setProps])
 
-  const dialogController = useMemo(
-    () => ({ open, close, props }),
-    [open, close, props]
-  );
+  const dialogController = useMemo(() => ({ open, close, props }), [open, close, props])
 
-  return dialogController;
-};
+  return dialogController
+}
 
 export const Dialog = ({ children, title, actions, className }: DialogProps) => {
   return (
-    <div className={styles.DialogOverlay + ' ' + (className ? className : '')}>
+    <div className={styles.DialogOverlay + " " + (className ? className : "")}>
       <div className={styles.Dialog}>
         <div className={styles.DialogHeader}>{title}</div>
         <div className={styles.DialogBody}>{children}</div>
         <div className={styles.DialogFooter}>
-          {actions?.map((props, index) => (
-            <Button key={index} {...props} />
-          ))}
+          {actions?.map((props, index) => <Button key={index} {...props} />)}
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
